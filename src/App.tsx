@@ -1,19 +1,13 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
-import Button from './Components/Button'
+import { BrowserRouter } from "react-router-dom"
+import { AppRoutes } from './Routes'
 
-function App() {
-  const [count, setcount] = useState(0)
-
-  function countUp () {
-    setcount(count + 1)
-  }
-
+const App: React.FC = () => {
   return (
-    <>
-    <Button onClick={countUp}/>
-    <p>{count}</p>
-    </>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 
