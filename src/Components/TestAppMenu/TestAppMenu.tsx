@@ -15,6 +15,9 @@ const TestAppMenu: React.FC = () => {
                 <Link to="/chatbot">
                     <Button type="primary">チャットボット</Button>
                 </Link>
+                <Link to="/quiz">
+                    <Button type="primary">クイズアプリ</Button>
+                </Link>
                 <Link to="/unchi">
                     <Button type="primary">ツールアプリ</Button>
                 </Link>
