@@ -11,9 +11,10 @@ const TestAppMenu: React.FC = () => {
                 <Link to="/warikan">
                     <Button type="primary">割勘アプリ</Button>
                 </Link>
-                {/* <Link to="/chatbot">
+                {/* chatbotブランチでは有効にする */}
+                <Link to="/chatbot">
                     <Button type="primary">チャットボット</Button>
-                </Link> */}
+                </Link>
                 <Link to="/unchi">
                     <Button type="primary">ツールアプリ</Button>
                 </Link>
