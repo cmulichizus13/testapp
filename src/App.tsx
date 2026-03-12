@@ -5,7 +5,7 @@ import { AppRoutes } from './Routes'
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/testapp/">
       <AppRoutes />
     </BrowserRouter>
   )
