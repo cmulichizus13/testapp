@@ -8,12 +8,13 @@ const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE_API_KEY });
 
 
 const GeneralChatbot: React.FC = () => {
+    const genAiModel = import.meta.env.VITE_GOOGLE_API_MODEL || "gemini-3.1-flash-lite-preview";
     const [responseString, setResponseString] = React.useState<string>("");
     const [inputString, setInputString] = React.useState<string>("");
 
     const createResponse = async (str: string) => {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: genAiModel,
             contents: str,
         });
         setResponseString(response.text || "AIからの回答がありませんでした。");

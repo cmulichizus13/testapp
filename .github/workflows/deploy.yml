@@ -41,8 +41,19 @@ jobs:
         run: npm run build
         env:
           VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
+          VITE_GOOGLE_API_MODEL: ${{ secrets.VITE_GOOGLE_API_MODEL }}
           VITE_QUIZ_PROMPT_1: ${{ secrets.VITE_QUIZ_PROMPT_1 }}
-          VITE_QUIZ_ANSWER_1: ${{ secrets.VITE_QUIZ_ANSWER_1 }}
+          VITE_QUIZ_ANSWER_1: ${{ secrets.VITE_QUIZ_ANSWER_1 }} 
+          VITE_QUIZ_PROMPT_2: ${{ secrets.VITE_QUIZ_PROMPT_2 }}
+          VITE_QUIZ_ANSWER_2: ${{ secrets.VITE_QUIZ_ANSWER_2 }}
+          VITE_QUIZ_PROMPT_3: ${{ secrets.VITE_QUIZ_PROMPT_3 }}
+          VITE_QUIZ_ANSWER_3: ${{ secrets.VITE_QUIZ_ANSWER_3 }}
+          VITE_QUIZ_PROMPT_4: ${{ secrets.VITE_QUIZ_PROMPT_4 }}
+          VITE_QUIZ_ANSWER_4: ${{ secrets.VITE_QUIZ_ANSWER_4 }}
+          VITE_QUIZ_PROMPT_5: ${{ secrets.VITE_QUIZ_PROMPT_5 }}
+          VITE_QUIZ_ANSWER_5: ${{ secrets.VITE_QUIZ_ANSWER_5 }}
+          VITE_QUIZ_PROMPT_6: ${{ secrets.VITE_QUIZ_PROMPT_6 }}
+          VITE_QUIZ_ANSWER_6: ${{ secrets.VITE_QUIZ_ANSWER_6 }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

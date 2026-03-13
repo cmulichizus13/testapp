@@ -75,6 +75,7 @@ const QuizApp: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const quizId = parseInt(id || "1", 10);
     const currentQuiz = getQuizData(quizId);
+    const genAiModel = import.meta.env.VITE_GOOGLE_API_MODEL || "gemini-3.1-flash-lite-preview";
 
     const [responseString, setResponseString] = React.useState<string>("0");
     const [inputString, setInputString] = React.useState<string>("");
@@ -94,7 +95,7 @@ const QuizApp: React.FC = () => {
 
     const createResponse = async (str: string) => {
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: genAiModel,
             contents: str,
         });
         const responseText = response.text || "AIからの回答がありませんでした。";

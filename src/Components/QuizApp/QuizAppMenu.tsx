@@ -28,7 +28,7 @@ const QuizAppMenu: React.FC = () => {
 6. 正解/不正解が表示されます。不正解の場合は再度回答でき、×ボタン押下でクイズ画面に戻ることができます。
 ## 複数人で遊ぶ場合のルール(例)
 ---
-- 回答者は順番に、AIに対する質問をすることができます。**全員が3回ずつ質問した時点で、それ以上の質問は無効**となります。
+- 回答者は順番に、AIに対する質問をすることができます。**全員が2-3回ずつ質問した時点で、それ以上の質問は無効**となります。
 - 正解が分かったら申告し、その場で回答することができます。**回答権は一人につき2回です。**
 - 最も早く正解した人の勝利となります。
 ## 免責事項
@@ -65,18 +65,6 @@ const QuizAppMenu: React.FC = () => {
                 </Link>
                 <Link to="/quiz/6">
                     <Button type="primary">問題6</Button>
-                </Link>
-                <Link to="/quiz/7">
-                    <Button type="primary">問題7</Button>
-                </Link>
-                <Link to="/quiz/8">
-                    <Button type="primary">問題8</Button>
-                </Link>
-                <Link to="/quiz/9">
-                    <Button type="primary">問題9</Button>
-                </Link>
-                <Link to="/quiz/10">
-                    <Button type="primary">問題10</Button>
                 </Link>
             </div>
             <Modal
