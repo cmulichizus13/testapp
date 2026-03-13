@@ -203,30 +203,38 @@ const QuizApp: React.FC = () => {
                 </div>
 
                 {/* 右側：質問・回答履歴パネル */}
-                <div style={{ width: '300px', height: 'calc(100vh - 200px)', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ width: '300px', height: 'calc(100vh - 200px)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
                     <Card 
                         title="質問・回答履歴" 
-                        bodyStyle={{ 
-                            overflowY: 'auto',
-                            paddingRight: '8px',
-                            flex: 1
+                        bodyStyle={{
+                            padding: '12px',
+                            flex: 1,
+                            overflow: 'hidden',
+                            display: 'flex',
+                            flexDirection: 'column'
                         }}
-                        style={{ display: 'flex', flexDirection: 'column', flex: 1 }}
+                        style={{ display: 'flex', flexDirection: 'column', flex: 1, overflow: 'hidden' }}
                     >
-                        {chatHistory.length === 0 ? (
-                            <p style={{ color: '#999', textAlign: 'center', marginTop: '20px' }}>まだ履歴がありません</p>
-                        ) : (
-                            <div>
-                                {chatHistory.map((item, index) => (
-                                    <div key={index} style={{ marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid #eee' }}>
-                                        <p style={{ fontWeight: 'bold', marginBottom: '4px', fontSize: '12px', color: '#666' }}>Q. {index + 1}</p>
-                                        <p style={{ fontSize: '12px', marginBottom: '8px', wordBreak: 'break-word' }}>{item.question}</p>
-                                        <p style={{ fontWeight: 'bold', marginBottom: '4px', fontSize: '12px', color: '#666' }}>A.</p>
-                                        <p style={{ fontSize: '12px', color: '#1890ff', wordBreak: 'break-word' }}>{item.response}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
+                        <div style={{
+                            flex: 1,
+                            overflowY: 'auto',
+                            paddingRight: '8px'
+                        }}>
+                            {chatHistory.length === 0 ? (
+                                <p style={{ color: '#999', textAlign: 'center', marginTop: '20px' }}>まだ履歴がありません</p>
+                            ) : (
+                                <div>
+                                    {chatHistory.map((item, index) => (
+                                        <div key={index} style={{ marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid #eee' }}>
+                                            <p style={{ fontWeight: 'bold', marginBottom: '4px', fontSize: '12px', color: '#666' }}>Q. {index + 1}</p>
+                                            <p style={{ fontSize: '12px', marginBottom: '8px', wordBreak: 'break-word' }}>{item.question}</p>
+                                            <p style={{ fontWeight: 'bold', marginBottom: '4px', fontSize: '12px', color: '#666' }}>A.</p>
+                                            <p style={{ fontSize: '12px', color: '#1890ff', wordBreak: 'break-word' }}>{item.response}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     </Card>
                 </div>
             </div>

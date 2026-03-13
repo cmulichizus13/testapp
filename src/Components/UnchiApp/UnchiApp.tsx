@@ -9,7 +9,7 @@ const UnchiApp: React.FC = () => {
       <Link to="/">
         <Button icon={<HomeOutlined />}>ホームに戻る</Button>
       </Link>
-      <p style={{ fontSize: '150px', fontWeight: 'bold', color: 'red' }}>うんち！</p>
+      <p style={{ fontSize: '150px', fontWeight: 'bold', color: 'red' }}>💩</p>
       <p>ほかのアプリを使ってください。</p>
     </div>
   )
