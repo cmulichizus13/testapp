@@ -6,7 +6,7 @@ const TestAppMenu: React.FC = () => {
     return (
         <div className={styles.container}>
             <h2>🚀クソアプリ置き場🚀</h2>
-            <p>一応、Reactで書いています...</p>
+            <p>一応、Reactで書いています</p>
             <div className={styles.buttonGroup}>
                 <Link to="/warikan">
                     <Button type="primary">割勘アプリ</Button>
